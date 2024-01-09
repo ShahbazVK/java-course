@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Comparator;
 
 class Main {
   // // static method can access only static variables
@@ -30,27 +33,111 @@ class Main {
 
     // ---------------------------------CALCULATOR---------------------------------
 
-    Scanner scanner = new Scanner(System.in);
+    // Scanner scanner = new Scanner(System.in);
 
-    System.out.print("Enter the first number: ");
-    float number1 = scanner.nextFloat();
-    System.out.print("Enter the second number: ");
-    float number2 = scanner.nextFloat();
+    // System.out.print("Enter the first number: ");
+    // float number1 = scanner.nextFloat();
+    // System.out.print("Enter the second number: ");
+    // float number2 = scanner.nextFloat();
 
-    scanner.nextLine();
+    // scanner.nextLine();
 
-    System.out.print("Enter operation: ");
-    String op = scanner.nextLine();
+    // System.out.print("Enter operation: ");
+    // String op = scanner.nextLine();
 
-    if (op.equals("sum")) {
-      System.out.printf("%f + %f = %f", number1, number2, number1 + number2);
-    } else if (op.equals("sub")) {
-      System.out.printf("%f - %f = %f", number1, number2, number1 - number2);
-    } else if (op.equals("mul")) {
-      System.out.printf("%f * %f = %f", number1, number2, number1 * number2);
-    } else if (op.equals("div")) {
-      System.out.printf("%f / %f = %f", number1, number2, number1 / number2);
-    }
+    // if (op.equals("sum")) {
+    // System.out.printf("%f + %f = %f", number1, number2, number1 + number2);
+    // } else if (op.equals("sub")) {
+    // System.out.printf("%f - %f = %f", number1, number2, number1 - number2);
+    // } else if (op.equals("mul")) {
+    // System.out.printf("%f * %f = %f", number1, number2, number1 * number2);
+    // } else if (op.equals("div")) {
+    // System.out.printf("%f / %f = %f", number1, number2, number1 / number2);
+    // }
+
+    // -----------------------------VOWLES-----------------------------
+    char vowels[] = { 'e', 'i', 'a', 'o', 'u' };
+    // vowels[0]='a';
+    // vowels[1]='e';
+    // vowels[2]='i';
+    // vowels[3]='o';
+    // vowels[4]='u';
+
+    // System.out.println(vowels.length);
+    // Arrays.sort(vowels);
+    // char key='i';
+    // int foundItemIndex=Arrays.binarySearch(vowels,key);
+    // System.out.println(Arrays.toString(vowels));
+    // System.out.println(foundItemIndex);
+
+    // int startingIndex=0;
+    // int endingIndex=3;
+
+    // Arrays.fill(vowels,startingIndex,endingIndex,'x');
+    // System.out.println(Arrays.toString(vowels));
+
+    // int numbers[]={1,2,3,4,5};
+    // int copyOfNumbers1[]=numbers;
+    // int copyOfNumbers2[]=Arrays.copyOf(numbers,numbers.length);
+    // // int copyOfNumbers2[]=Arrays.copyOfRange(numbers,1,4);
+    // Arrays.fill(numbers,0);
+
+    // System.out.println(Arrays.toString(numbers));
+    // System.out.println(Arrays.toString(copyOfNumbers1));
+    // System.out.println(Arrays.toString(copyOfNumbers2));
+
+    // // -----------------------------LOOPS-----------------------------
+    // int numbers[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    // int sum = 0;
+    // for (int number = 0; number < numbers.length; number++) {
+    // sum += numbers[number];
+    // }
+    // System.out.println(sum);
+
+    // // Table of any number
+    // int tableOf = 5;
+    // for (int number = 1; number <= 10; number++) {
+    // System.out.printf("%d X %d = %d \n", tableOf, number, tableOf * number);
+    // }
+
+    // // -----------------------------ODD NUMBER / EVEN
+    // NUMBER-----------------------------
+
+    // System.out.println("Odd numbers:");
+    // for (int number = 1; number <= 10; number++) {
+    //   if (number % 2 == 1) {
+    //     System.out.println(number);
+    //   }
+    // }
+    // System.out.println();
+    // for (int odd : numbers) {
+    //   if (odd % 2 == 1) {
+    //     System.out.println(odd);
+    //   }
+    // }
+
+    // -----------------------------ARRAY-LIST-----------------------------
+
+    ArrayList<Integer> numbers = new ArrayList<Integer>();
+
+    numbers.add(4);
+    numbers.add(5);
+    numbers.add(3);
+    numbers.add(1);
+    numbers.add(2);
+
+    System.out.println(numbers.toString());
+    System.out.println(numbers.get(2));
+
+    numbers.remove(Integer.valueOf(4));
+    numbers.set(2, Integer.valueOf(30));
+
+    System.out.println(numbers.toString());
+
+    // numbers.clear();
+
+    numbers.sort(Comparator.naturalOrder());
+    System.out.println(numbers.toString());
 
   }
 }
