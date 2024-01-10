@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 
 class Main {
   // // static method can access only static variables
@@ -105,39 +106,70 @@ class Main {
 
     // System.out.println("Odd numbers:");
     // for (int number = 1; number <= 10; number++) {
-    //   if (number % 2 == 1) {
-    //     System.out.println(number);
-    //   }
+    // if (number % 2 == 1) {
+    // System.out.println(number);
+    // }
     // }
     // System.out.println();
     // for (int odd : numbers) {
-    //   if (odd % 2 == 1) {
-    //     System.out.println(odd);
-    //   }
+    // if (odd % 2 == 1) {
+    // System.out.println(odd);
+    // }
     // }
 
     // -----------------------------ARRAY-LIST-----------------------------
 
-    ArrayList<Integer> numbers = new ArrayList<Integer>();
+    // ArrayList<Integer> numbers = new ArrayList<Integer>();
 
-    numbers.add(4);
-    numbers.add(5);
-    numbers.add(3);
-    numbers.add(1);
-    numbers.add(2);
+    // numbers.add(4);
+    // numbers.add(5);
+    // numbers.add(3);
+    // numbers.add(1);
+    // numbers.add(2);
 
-    System.out.println(numbers.toString());
-    System.out.println(numbers.get(2));
+    // System.out.println(numbers.toString());
+    // System.out.println(numbers.get(2));
 
-    numbers.remove(Integer.valueOf(4));
-    numbers.set(2, Integer.valueOf(30));
+    // numbers.remove(Integer.valueOf(4));
+    // numbers.set(2, Integer.valueOf(30));
 
-    System.out.println(numbers.toString());
+    // System.out.println(numbers.toString());
 
-    // numbers.clear();
+    // // numbers.clear();
 
-    numbers.sort(Comparator.naturalOrder());
-    System.out.println(numbers.toString());
+    // numbers.sort(Comparator.naturalOrder());
+    // System.out.println(numbers.toString());
 
+    // -------------------------HASHMAP-----------------------------
+
+    HashMap<String, Integer> examScores = new HashMap<String, Integer>();
+
+    examScores.put("Math", 75);
+    examScores.put("Sociology", 85);
+    examScores.put("English", 95);
+    examScores.put("Bengali", 85);
+    examScores.put("Computer Programming", 96);
+
+    examScores.putIfAbsent("Bengali", 30);
+    examScores.replace("English", 20);
+
+    System.out.println(examScores.toString());
+    System.out.println(examScores.get("Bengali"));
+
+    System.out.println(examScores.getOrDefault("Religion", -1));
+
+    System.out.println(examScores.size());
+
+    examScores.remove("Bengali");
+
+    examScores.containsKey("Bengali");
+
+    examScores.forEach((key,value)->{
+      System.out.println(key + " - " + value);
+    });
+
+    examScores.clear();
+    System.out.println(examScores.toString());
+    
   }
 }
