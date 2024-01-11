@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.time.LocalDate;
 
 class Main {
   // // static method can access only static variables
@@ -142,34 +143,53 @@ class Main {
 
     // -------------------------HASHMAP-----------------------------
 
-    HashMap<String, Integer> examScores = new HashMap<String, Integer>();
+    // HashMap<String, Integer> examScores = new HashMap<String, Integer>();
 
-    examScores.put("Math", 75);
-    examScores.put("Sociology", 85);
-    examScores.put("English", 95);
-    examScores.put("Bengali", 85);
-    examScores.put("Computer Programming", 96);
+    // examScores.put("Math", 75);
+    // examScores.put("Sociology", 85);
+    // examScores.put("English", 95);
+    // examScores.put("Bengali", 85);
+    // examScores.put("Computer Programming", 96);
 
-    examScores.putIfAbsent("Bengali", 30);
-    examScores.replace("English", 20);
+    // examScores.putIfAbsent("Bengali", 30);
+    // examScores.replace("English", 20);
 
-    System.out.println(examScores.toString());
-    System.out.println(examScores.get("Bengali"));
+    // System.out.println(examScores.toString());
+    // System.out.println(examScores.get("Bengali"));
 
-    System.out.println(examScores.getOrDefault("Religion", -1));
+    // System.out.println(examScores.getOrDefault("Religion", -1));
 
-    System.out.println(examScores.size());
+    // System.out.println(examScores.size());
 
-    examScores.remove("Bengali");
+    // examScores.remove("Bengali");
 
-    examScores.containsKey("Bengali");
+    // examScores.containsKey("Bengali");
 
-    examScores.forEach((key,value)->{
-      System.out.println(key + " - " + value);
-    });
+    // examScores.forEach((key,value)->{
+    // System.out.println(key + " - " + value);
+    // });
 
-    examScores.clear();
-    System.out.println(examScores.toString());
-    
+    // examScores.clear();
+    // System.out.println(examScores.toString());
+
+    // -------------------------OOP-----------------------------
+
+    // User user = new User("Shahbaz", "1995-01-31");
+
+    Book rizwanBook = new Book("Rizwan's supermacy", "Rizwan",99);
+    AudioBook babarAudio = new AudioBook("Babar's supermacy in audio", "Babar", 4000);
+    EBook FakharEbook = new EBook("Fakhar's supermacy in E-book", "Fakhar", 201,5000);
+
+    System.out.println(rizwanBook.toString());
+    System.out.println(babarAudio.toString());
+    System.out.println(FakharEbook.toString());
+
+
+    // user.borrow(book);
+
+    // System.out.printf("%s is %s years old.\n", user.getName(), user.age());
+    // System.out.printf("%s has borrowed following books.\n %s", user.getName(),
+    // user.getBooks().toString());
+
   }
 }
